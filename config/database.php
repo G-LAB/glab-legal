@@ -34,22 +34,21 @@
 | the active record class
 */
 
-$active_group = "default";
+$active_group = "cms";
 $active_record = TRUE;
 
-//$db['default']['hostname'] = "internal-db.s91576.gridserver.com";
-//$db['default']['username'] = "db91576";
-//$db['default']['password'] = "KsQXughkwjhZGqNIIqrbUzDnwyI9eQcnzZQLiqKQfC9HrvRxWr";
-//$db['default']['database'] = "db91576_glab_cms";
-//$db['default']['dbdriver'] = "mysql";
-//$db['default']['dbprefix'] = "";
-//$db['default']['pconnect'] = TRUE;
-//$db['default']['db_debug'] = TRUE;
-//$db['default']['cache_on'] = FALSE;
-//$db['default']['cachedir'] = "";
-//$db['default']['char_set'] = "utf8";
-//$db['default']['dbcollat'] = "utf8_general_ci";
-
+$db['cms']['hostname'] = "localhost";
+$db['cms']['username'] = "glab_cms";
+$db['cms']['password'] = "fWGe6T8XjZAZXb";
+$db['cms']['database'] = "glab_cms";
+$db['cms']['dbdriver'] = "mysql";
+$db['cms']['dbprefix'] = "";
+$db['cms']['pconnect'] = TRUE;
+$db['cms']['db_debug'] = TRUE;
+$db['cms']['cache_on'] = FALSE;
+$db['cms']['cachedir'] = "";
+$db['cms']['char_set'] = "utf8";
+$db['cms']['dbcollat'] = "utf8_general_ci";
 
 /* End of file database.php */
 /* Location: ./system/application/config/database.php */
