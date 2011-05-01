@@ -9,13 +9,7 @@
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
 */
-
-$hook['pre_controller'][] = array(
-                                'class'    => '',
-                                'function' => 'SSLCheck',
-                                'filename' => 'SSLCheck.php',
-                                'filepath' => 'hooks'
-                                );
+ 
 
 /* End of file hooks.php */
 /* Location: ./system/application/config/hooks.php */

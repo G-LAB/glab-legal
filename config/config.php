@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "https://sso.glabstudios.com/";
+$config['base_url']	= "http://legal.glabstudios.com/";
 
 /*
 |--------------------------------------------------------------------------

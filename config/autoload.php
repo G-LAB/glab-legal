@@ -39,7 +39,7 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('session','display','SSO_Lib','SSO_Server','Header');
+$autoload['libraries'] = array('session','display','header','database');
 
 
 /*
@@ -51,7 +51,7 @@ $autoload['libraries'] = array('session','display','SSO_Lib','SSO_Server','Heade
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('date','url','browserupdate','snippet','data');
+$autoload['helper'] = array('date','url','browserupdate','snippet','data','array');
 
 
 /*
@@ -108,7 +108,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array('agreement');
 
 
 

@@ -3,7 +3,7 @@ class Home extends CI_Controller {
 	
 	
 	function index () {
-		redirect('account');
+		redirect('http://glabstudios.com/');
 	}
 
 }
