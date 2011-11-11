@@ -11,7 +11,8 @@ class Sign extends CI_Controller {
 		
 		$this->load->helper('form');
 		$this->load->library('form_validation');
-		$this->load->model('entity');
+		$this->load->model('agreement');
+		$this->load->model('profile');
 	}
 	
 	function _remap($str) {
@@ -20,6 +21,10 @@ class Sign extends CI_Controller {
 	
 	function index ($key=false) {
 		
+		if ($key == 'index') {
+			show_error('URL must contain unique key.');
+		}
+
 		if ($this->input->post('agree')) {
 			$this->form_validation->set_rules('signature', 'signature', 'trim|required|min_length[7]|max_length[64]');
 		}
@@ -42,8 +47,8 @@ class Sign extends CI_Controller {
 			if (count($request)) {
 				
 				$data['agreement'] = $this->agreement->getLatest($request['agid']);
-				$data['entity_sign'] = $this->entity->get($request['eid']);
-				$data['entity_parent'] = $this->entity->get($request['peid']);
+				$data['profile'] = $this->profile->get($request['pid']);
+				$data['profile_signer'] = $this->profile->get($request['pid_signer']);
 				
 				$this->display->setViewBody('/legal-temp/form', $data);
 				

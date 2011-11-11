@@ -18,14 +18,31 @@
 |
 | These are the things you can load automatically:
 |
-| 1. Libraries
-| 2. Helper files
-| 3. Plugins
+| 1. Packages
+| 2. Libraries
+| 3. Helper files
 | 4. Custom config files
 | 5. Language files
 | 6. Models
 |
 */
+
+/*
+| -------------------------------------------------------------------
+|  Auto-load Packges
+| -------------------------------------------------------------------
+| Prototype:
+|
+|  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
+|
+*/
+
+$autoload['packages'] = array(
+		APPPATH.'third_party/glab-api-kit', 
+		APPPATH.'third_party/glab-ci-ext', 
+		APPPATH.'third_party/g-lib'
+);
+
 
 /*
 | -------------------------------------------------------------------
@@ -39,7 +56,7 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('session','display','header','database');
+$autoload['libraries'] = array('Display','SSO_Lib','Header','session','API','database');
 
 
 /*
@@ -51,19 +68,20 @@ $autoload['libraries'] = array('session','display','header','database');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('date','url','browserupdate','snippet','data','array');
-
-
-/*
-| -------------------------------------------------------------------
-|  Auto-load Plugins
-| -------------------------------------------------------------------
-| Prototype:
-|
-|	$autoload['plugin'] = array('captcha', 'js_calendar');
-*/
-
-$autoload['plugin'] = array();
+$autoload['helper'] = 
+					array(
+						'language',
+						'url', 'glab_url',
+						'typography', 'glab_typography',
+						'glab_feed',
+						'glab_API',
+						'date', 'glab_date', 'glib_date',
+						'glib_twitter',
+						'number', 'glab_number', 'glib_number',
+						'glab_snippet',
+						'array', 'glib_array',
+						'glab_browserupdate'
+					);
 
 
 /*
@@ -98,19 +116,5 @@ $autoload['config'] = array();
 $autoload['language'] = array();
 
 
-/*
-| -------------------------------------------------------------------
-|  Auto-load Models
-| -------------------------------------------------------------------
-| Prototype:
-|
-|	$autoload['model'] = array('model1', 'model2');
-|
-*/
-
-$autoload['model'] = array('agreement');
-
-
-
 /* End of file autoload.php */
-/* Location: ./system/application/config/autoload.php */
+/* Location: ./application/config/autoload.php */
