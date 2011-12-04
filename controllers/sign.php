@@ -50,7 +50,14 @@ class Sign extends CI_Controller {
 				$data['profile'] = $this->profile->get($request['pid']);
 				$data['profile_signer'] = $this->profile->get($request['pid_signer']);
 				
-				$this->display->setViewBody('/legal-temp/form', $data);
+				if ($data['profile']->exists() === true)
+				{
+					$this->display->setViewBody('/legal-temp/form', $data);
+				}
+				else
+				{
+					show_error('Could not load profile for '.$request['pid'].'.');
+				}
 				
 			} else {
 				show_error('The request for signature could not be located.  Please call your account manager for assistance.');
